@@ -15,28 +15,21 @@
     <div class="container">
         <header class="text-center text-light my-4">
             <h1 class="mb-4">ToDo List</h1>
+
             <form class="search">
-                <input type="text" class="form-control m-auto" name="Search" placeholder="Search ToDos" />
+                <input type="text" class="form-control m-auto  text-dark fs-2 " placeholder="Search ToDos"
+                    autocomplete="off" />
             </form>
         </header>
-        <ul class="list-group todos mx-auto text-light">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span>buy milk</span>
-                <i class="far fa-trash-alt delete"></i>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span>go to dentist</span>
-                <i class="far fa-trash-alt delete"></i>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span>buy an ipad pro</span>
-                <i class="far fa-trash-alt delete"></i>
-            </li>
+
+
+        <ul class="list-group todos mx-auto text-dark">
+
         </ul>
 
         <form class="add text-center my-4">
-            <label class="text-light">Add a new todo...</label>
-            <input class="form-control m-auto" type="text" name="add" />
+            <label class="text-light ">Add a new todo...</label>
+            <input class="form-control m-auto p-2 text-dark fs-3" type="text" name="add" autocomplete="off" />
         </form>
     </div>
     <script src="sandbox.js"></script>

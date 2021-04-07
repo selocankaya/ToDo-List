@@ -3,12 +3,12 @@ const list = document.querySelector('.todos');
 const search = document.querySelector('.search input');
 
 const generateTemplate = (todo) => {
-  const html = `<li
-  class="list-group-item d-flex justify-content-between align-items-center"
->
-  <span>${todo}</span>
+  const html = `
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  <i class="fas fa-check complete"></i>
+  <span id="text">${todo}</span>
   <i class="far fa-trash-alt delete"></i>
-</li>`;
+  </li>`;
   list.innerHTML += html;
 };
 
@@ -31,6 +31,15 @@ list.addEventListener('click', (e) => {
   }
 });
 
+//complete todos
+
+list.addEventListener('click', (e2) => {
+  if (e2.target.classList.contains('complete')) {
+    e2.target.parentElement.classList.toggle('completed');
+  }
+});
+
+// SEARCH
 const filterTodos = (term) => {
   Array.from(list.children)
     .filter((todo) => !todo.textContent.toLowerCase().includes(term))

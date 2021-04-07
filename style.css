@@ -10,18 +10,29 @@ input[type='text'],
 input[type='text']:focus {
   color: white;
   border: none;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(230, 221, 59, 0.9);
   max-width: 500px;
 }
 
 .todos li {
-  background-color: #f48b29;
+  background-color: rgba(255, 201, 60, 1);
   height: 50px;
   font-size: 24px;
   opacity: 0.8;
 }
 
 .delete {
+  cursor: pointer;
+  color: crimson;
+  opacity: 0.7;
+}
+
+.todos li.completed {
+  color: #b6b6b6;
+  text-decoration: line-through;
+}
+
+.complete {
   cursor: pointer;
   color: crimson;
   opacity: 0.7;
